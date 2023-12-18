@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Navigation bar of Website */
+        
+        /* Navigation bar of Website */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Century Gothic', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgb(245, 245, 245);
+              border-bottom: 1px solid rgba(0, 0, 0, 0.347);
+              height: 207px;
+              overflow: auto;
+              padding: 20px;
+            }
+            ul {
+                float: right;
+                list-style-type: none;
+            }
+        
+        ul li {
+            display: inline;
+            position: relative;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content .camp {
+            display: none;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content .camp{
+            display: block;
+        }
+        
+        
+        
+        ul li .blackbox {
+            font-family: cursive;
+            text-decoration: none;
+            color: #5b5959;
+            font-size: 28px;
+            padding: 21px 65px;
+            overflow: auto;
+            
+
+        }
+        ul li .blackbox:hover{
+            color: white;
+            background-color: rgb(235, 235, 235);
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        
+        .LOGO-Img {
+            height: 130px;
+            width: 140px;
+        }
+        .LOGO-text{
+            margin: 21px 0px 0px 0px;
+            font-family: revert;
+            font-size: 67px;
+        }
+        
+        .LOGO {
+            display: flex;
+            color: #5b5959;
+        }
+        
+        /* Body of the Website */
+        #myhome{
+            display: flex;
+            gap: 10px;
+            border: 10px solid #5f5f5f1a;
+            border-radius: 30px;
+    margin: 28px 30px 4px;
+    flex-direction: row-reverse;
+    height: 560px;
+    width: 97%;
+    background: #fff;
+    overflow: hidden;
+} 
+
+.home{
+    clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0 100%);
+    height: 558px;
+    width: 1082px;
+    
+    
+}
+        
+        #myimage{
+            background: url("/Screenshot\ 2023-10-29\ 171543.png") no-repeat center center/cover;
+        }
+        #effect{
+            background: rgba(0, 0, 0, 0.639);
+        }
+        #welcome{
+            background: rgb(255, 255, 255);
+          height: 390px;
+          width: 1391px;
+        }
+        
+        .greeting {
+            font-size: 88px;
+            color: #5b5959;
+            font-weight: 800;
+            margin: 30px
+        } 
+        .intro{
+            font-size: 33px;
+            color: #3d3535;
+            font-weight: 800;
+            margin: 49px;
+        }
+        .button{
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 30px;
+    font-weight: 700;
+    border-radius: 18px;
+    padding: 11px 29px 18px;
+    color: #ffffff;
+    background: #000000;
+    border: 2px Solid rgba(0, 0, 0, 0.397);
+        }
+        .button:hover{
+            color: #fffdfd;
+            background: #c1b9b9;
+        }
+        /* community */
+        #community-bar{
+            margin: 20px 0px 0px 1px;
+           text-align: center;
+           font-size: 44px;
+           font-weight: bold;
+           font-family: 'Baloo 2', sans-serif;
+            color: #5b5959;
+        }
+            #Community{
+                position: static;
+                margin: 58px 1px 94px 1px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                border-radius: 30px;
+                height: 39%;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .content {
+          border-bottom: 10px solid #5f5f5f1a;
+          border-top: 1px solid #5f5f5f1a;
+          border-left: 10px solid #5f5f5f1a;
+          border-right: 10px solid #5f5f5f1a;
+          text-align: center;
+          font-size: 17px;
+          margin: 22px 16px 18px 23px;
+          height: 591px;
+          width: 554px ;
+          background-color: rgb(255, 255, 255);
+}
+
+#content1{
+    position: static;
+    
+} 
+#content2{
+    position: static
+    
+}
+#content3{
+    position: staticS;
+}
+.content-image{
+    margin: 14px 16px 9px 17px;
+    border-radius: 30px 30px 30px 30px;
+    height: 500px;
+    width: 506px;
+    }
+    .project-link{
+        text-decoration: none;
+        font-size: 28px;
+        color: #000000;
+        
+    }
+     #content-image1{
+         background: url(/Screenshot\ 2023-12-10\ 080855.png)no-repeat center center/cover;
+        }
+        #content-image2{
+            background: url(/Screenshot\ 2023-12-10\ 075314.png)no-repeat center center/cover;
+    }
+    #content-image3{
+        background: url(/Screenshot\ 2023-12-10\ 072852.png)no-repeat center center/cover; 
+    }
+    /*footer of website */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+   
+       
+    
+    </style>
+    <link href='phone.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navigation bar of Website -->
+    <header>
+        <div class="LOGO">
+            <img class="LOGO-Img" src="./Screenshot_2023-06-08_081704-removebg-preview.png">
+            <h1 class="LOGO-text">CODEGURE</h1>
+        </div>
+        <nav id="navbar">
+            <ul class="nav">
+                <li>
+                 <a class="blackbox" href="homepage.html"><span>Home</span></a>
+                </a>
+                </li>
+                <li>
+                    <a class="blackbox" href="#Community"><span>Community</span></a>
+                </li>
+                <li>
+                    <a class="blackbox" href="#"><span>Download VS</span></a>
+                </li>
+                <li class="dropdown">
+                    <a class="blackbox" id="dropbtn" href="#">Language<i class='bx bxs-down-arrow' style='color:#6f6c6c' ></i></a>
+                    <div class="dropdown-content">
+                       
+                        <a class="camp" href="#"><span>css</span></a>  
+                        <a class= "camp" href="#"><span>Html</span></a>
+                        <a class="camp" href="/Java Script.html"><span>Java Script</span></a>                                                                                                              
+                    </div>
+                </li>
+                <li class="sign up">
+                    <a class="blackbox" href="/code builder sign up .html">Sign up</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section id="homepage">
+
+        <div id="myhome">
+            <div class="home" id="myimage">
+                <div class="home" id="effect"></div>
+            </div>
+            <div id="welcome">
+                <h1 class="greeting">Thanks for visting</h1>
+                <h4 class="intro">thanks for visting if can Learn 
+                    Coding in My Website you need to download 
+                    Visual Studio Code I can help you to 
+                    programing language and you can project for
+                     basic understanding if you get some you feedback us </h4>
+                    <a href="Feedback.html" class="button">Feedback</a>
+            </div>
+    
+    
+        </div>
+    </section>
+    <section id="community-bar">
+        <H1>community project</H1>
+        <div id="Community">
+            <div class="content" id="content1">
+                <div class="content-image" id="content-image1"></div>
+                <a class="project-link" href="https://www.codewithrandom.com/2022/05/12/calculator-using-html-and-css-calculator-pure-html-css-codewithrandom/">Language language translator</a>
+            </div>
+            <div class="content" id="content2">
+                <div class="content-image"  id="content-image2"></div>
+                <a class="project-link" href= "https://www.codewithrandom.com/2022/12/04/login-form-page-using-html-and-css/">Login Form Page Using HTML And CSS</a>
+           </div>
+            <div class="content" id="content3">
+                <div class="content-image"  id="content-image3">
+                </div>
+                 <a class="project-link" href="https://www.codewithrandom.com/2023/01/01/language-translator-using-javascript/">Language language translator</a>
+                
+            </div>
+        </div>
+    </section>
+     <!--footer of website-->
+    <footer>
+            &copy; 2023 Your Website. All rights reserved.
+        </footer>
+</body>
+</html>

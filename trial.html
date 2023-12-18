@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #question-container {
+            margin: 20px 0;
+        }
+
+        #options-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #timer {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <title>KBC Game</title>
+</head>
+<body>
+    <h1>Kaun Banega Crorepati</h1>
+
+    <div id="question-container"></div>
+    <div id="options-container"></div>
+    <div id="timer">Time Left: <span id="time">60</span> seconds</div>
+    <div id="result"></div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["Berlin", "Madrid", "Paris", "Rome"],
+                correctAnswer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Venus", "Mars", "Jupiter", "Saturn"],
+                correctAnswer: "Mars"
+            },
+            // Add more questions as needed
+        ];
+
+        let currentQuestionIndex = 0;
+        let timeLeft = 60;
+        let timerInterval;
+
+        function startGame() {
+            showQuestion();
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function showQuestion() {
+            const questionContainer = document.getElementById("question-container");
+            const optionsContainer = document.getElementById("options-container");
+
+            questionContainer.textContent = questions[currentQuestionIndex].question;
+            optionsContainer.innerHTML = "";
+
+            questions[currentQuestionIndex].options.forEach((option, index) => {
+                const button = document.createElement("button");
+                button.textContent = option;
+                button.addEventListener("click", () => checkAnswer(option));
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedOption) {
+            clearInterval(timerInterval);
+
+            const resultContainer = document.getElementById("result");
+
+            if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
+                resultContainer.textContent = "Correct!";
+
+                setTimeout(() => {
+                    resultContainer.textContent = "";
+                    currentQuestionIndex++;
+
+                    if (currentQuestionIndex < questions.length) {
+                        timeLeft = 60;
+                        startGame();
+                    } else {
+                        resultContainer.textContent = "Congratulations! You completed the game.";
+                    }
+                }, 2000);
+            } else {
+                resultContainer.textContent = "Wrong! Game Over.";
+            }
+        }
+
+        function updateTimer() {
+            const timeContainer = document.getElementById("time");
+            timeContainer.textContent = timeLeft;
+
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+                document.getElementById("result").textContent = "Time's up! Game Over.";
+            } else {
+                timeLeft--;
+            }
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
